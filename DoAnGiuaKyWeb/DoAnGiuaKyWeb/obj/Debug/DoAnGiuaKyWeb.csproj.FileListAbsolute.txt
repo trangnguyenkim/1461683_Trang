@@ -36,4 +36,3 @@ C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\bin\DoAn
 C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\bin\DoAnGiuaKyWeb.pdb
 C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\obj\Debug\DoAnGiuaKyWeb.dll
 C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\obj\Debug\DoAnGiuaKyWeb.pdb
-C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\obj\Debug\DoAnGiuaKyWeb.csprojResolveAssemblyReference.cache
