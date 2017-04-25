@@ -10,9 +10,9 @@ namespace DoAnGiuaKyWeb.Controllers
     public class ShopOnlineController : Controller
     {
         // GET: ShopOnline
-        public ActionResult Index()
+        public ActionResult Index(int page=1)
         {
-            return View(ShopOnlineBus.DS());
+            return View(ShopOnlineBus.DS(page,4));
         }
 
         // GET: ShopOnline/Details/5

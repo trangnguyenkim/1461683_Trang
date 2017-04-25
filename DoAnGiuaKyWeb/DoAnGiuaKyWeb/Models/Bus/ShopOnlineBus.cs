@@ -1,4 +1,5 @@
-﻿using ShopOnlineConnection;
+﻿using PetaPoco;
+using ShopOnlineConnection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,12 +23,12 @@ namespace DoAnGiuaKyWeb.Models.Bus
             var sql = string.Format("select * from SanPham where masanpham='{0}'", a);
             return db.SingleOrDefault<SanPham>(sql);
         }
-
-        public static PetaPoco.Page<SanPham> DanhSachSP(int page, int productPerPage)
+        public static Page<SanPham> DS(int page, int itempage)
         {
-            var db = new ShopOnlineConnectionDB();
-            var sql = string.Format("select * from SanPham");
-            return db.Page<SanPham>(page, productPerPage, sql);
+            var sql = new ShopOnlineConnectionDB();
+            return sql.Page<SanPham>(page, itempage, "select * from SanPham where TinhTrang=0");
         }
+
+
     }
 }
