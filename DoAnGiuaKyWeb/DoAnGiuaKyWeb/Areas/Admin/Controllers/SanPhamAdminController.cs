@@ -36,6 +36,17 @@ namespace DoAnGiuaKyWeb.Areas.Admin.Controllers
         {
             try
             {
+                if (HttpContext.Request.Files.Count > 0)
+                {
+                    var hpf = HttpContext.Request.Files[0];
+                    if (hpf.ContentLength > 0)
+                    {
+                        string fileName = Guid.NewGuid().ToString();
+                        string fullPathWithFileName = "/asset/images/" + fileName + ".jpg";
+                        hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                        sp.Hinhchinh = fullPathWithFileName;
+                    }
+                }
                 // TODO: Add insert logic here
                 sp.Luotview = 0;
                 sp.Tinhtrang = "0";
