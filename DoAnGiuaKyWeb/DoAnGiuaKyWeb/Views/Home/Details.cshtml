@@ -1,0 +1,58 @@
+﻿@model ShopOnlineConnection.SanPham
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div id="page-content" class="single-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb">
+                    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="main-content" class="col-md-12">
+                <div class="product">
+                    <div class="col-md-6">
+                        <div class="image">
+                            <img src="@Model.Hinhchinh">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="caption">
+                            <div class="name"><h3>Aliquam erat volutpat</h3></div>
+                            <div class="info">
+                                <ul>
+                                    <li>Mã Sản Phẩm: &ensp; @Model.Masanpham</li>
+                                    <li>Xuất Xứ: &ensp; @Model.Tensanpham</li>
+                                    <li>Số Lượng: &ensp; @Model.Cauhinh </li>
+                                    <li>Màn Hình: &ensp; @Model.Camera</li>
+                                    <li>Ram: &ensp;  @Model.Ram</li>
+                                    <li>Ram: &ensp;  @Model.Cpu</li>
+                                </ul>
+                            </div>
+                            <div class="price">Giá: &ensp; @string.Format("{0:#,0 Vnđ}", @Model.Gia) </div>
+                            <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                            <div class="share well">
+                                <strong style="margin-right: 13px;">Share :</strong>
+                                <a href="#" class="share-btn" target="_blank">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" class="share-btn" target="_blank">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="share-btn" target="_blank">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
