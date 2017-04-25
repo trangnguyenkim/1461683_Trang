@@ -60,24 +60,24 @@
                 <a href="@Url.Action("Create","SanPhamAdmin")"><img src="~/Areas/asste/img/Add.png" /></a>
             </td>
             <td>
-                <a href="@Url.Action("Edit","SanPhamAdmin",new { id=@item.Maloaisanpham })"><img src="~/Areas/asste/img/edit.png" /></a>
+                <a href="@Url.Action("Edit","SanPhamAdmin",new { id=@item.Masanpham })"><img src="~/Areas/asste/img/edit.png" /></a>
             </td>
 
             <td>
                 <form method="post" action="@Url.Action("xoatam","SanPhamAdmin")">
-                    <input type="hidden" name="id" value="@item.Maloaisanpham" />
+                    <input type="hidden" name="id" value="@item.Masanpham" />
                     <button type="submit"><img src="~/Areas/asste/img/khoa.png" /></button>
                 </form>
             </td>
 
             <td>
                 <form method="post" action="@Url.Action("KhoiPhucTinhTrang","SanPhamAdmin")">
-                    <input type="hidden" name="id" value="@item.Maloaisanpham" />
+                    <input type="hidden" name="id" value="@item.Masanpham" />
                     <button type="submit"><img src="~/Areas/asste/img/khoiphuc.png" /></button>
                 </form>
             </td>
             <td>
-                <a href="#"><img src="~/Areas/asste/img/delete.png" /></a>
+                <a href="@Url.Action("Delete","SanPhamAdmin",new { id=@item.Masanpham})"><img src="~/Areas/asste/img/delete.png" /></a>
             </td>
         </tr>
     }

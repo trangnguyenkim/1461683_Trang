@@ -78,18 +78,14 @@ namespace DoAnGiuaKyWeb.Areas.Admin.Controllers
 
         // POST: Admin/SanPhamAdmin/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(string id, FormCollection collection)
         {
-            try
-            {
-                // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            // TODO: Add delete logic here
+
+            SanPhamAdmin.XoaSanPham(id);
+            return RedirectToAction("Index");
+
         }
 
         public ActionResult xoatam(string id)

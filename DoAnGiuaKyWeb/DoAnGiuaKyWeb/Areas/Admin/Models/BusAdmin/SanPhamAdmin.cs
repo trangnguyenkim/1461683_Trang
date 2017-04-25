@@ -75,5 +75,12 @@ namespace DoAnGiuaKyWeb.Areas.Admin.Models.BusAdmin
                 return db.Query<ShopOnlineConnection.NhaSanXuat>("select * from NhaSanXuat ");
             }
         }
+
+        public static int XoaSanPham(string id)
+        {
+            var db = new ShopOnlineConnectionDB();
+
+            return db.Delete("SanPham", "Masanpham", null, id);
+        }
     }
 }
