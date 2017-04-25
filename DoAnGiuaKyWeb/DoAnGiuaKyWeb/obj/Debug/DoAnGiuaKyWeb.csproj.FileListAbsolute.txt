@@ -34,7 +34,5 @@ C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\bin\rosl
 C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\bin\DoAnGiuaKyWeb.dll.config
 C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\bin\DoAnGiuaKyWeb.dll
 C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\bin\DoAnGiuaKyWeb.pdb
-C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\obj\Debug\DoAnGiuaKyWeb.csprojResolveAssemblyReference.cache
 C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\obj\Debug\DoAnGiuaKyWeb.dll
 C:\Users\HieuDoan\Desktop\git\1461683_Trang\DoAnGiuaKyWeb\DoAnGiuaKyWeb\obj\Debug\DoAnGiuaKyWeb.pdb

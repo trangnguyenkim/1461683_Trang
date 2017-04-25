@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    table, td, th {
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th {
+        text-align: left;
+    }
+</style>
+<table>
+    <tr>
+        <th>Mã Loái Sản Phẩm</th>
+        <th>Tên Loại Sản Phẩm</th>
+        <th>Tình Trạng</th>
+        <th>Thêm</th>
+        <th>Sữa</th>
+        <th>Xóa</th>
+        <th>Khôi Phục</th>
+
+    </tr>
+   @foreach (var item in Model)
+   {
+    <tr>
+        <td>@item.Maloaisanpham</td>
+        <td>@item.Tenloaisanpham</td>
+        <td>@item.TinhTrang</td>
+        <td>
+            <a href="@Url.Action("Create","LoaiSanPhamAdmin")"><img src="~/Areas/asste/img/Add.png" /></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","LoaiSanPhamAdmin",new { id=@item.Maloaisanpham })"><img src="~/Areas/asste/img/edit.png" /></a>
+        </td>
+       
+        <td>
+            <form method="post" action="@Url.Action("xoatam","LoaiSanPhamAdmin")">
+                <input type="hidden" name="id" value="@item.Maloaisanpham" />
+                <button type="submit"><img src="~/Areas/asste/img/delete.png" /></button>
+            </form>
+        </td>
+        
+        <td>
+            <form method="post" action="@Url.Action("KhoiPhucTinhTrang","LoaiSanPhamAdmin")">
+                <input type="hidden" name="id" value="@item.Maloaisanpham" />
+                <button type="submit"><img src="~/Areas/asste/img/khoiphuc.png" /></button>
+            </form>
+        </td>
+    </tr>
+   }
+    
+
+
+</table>
+

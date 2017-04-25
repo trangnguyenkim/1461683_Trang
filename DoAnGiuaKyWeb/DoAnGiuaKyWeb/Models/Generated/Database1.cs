@@ -141,6 +141,8 @@ namespace ShopOnlineConnection
 
 
 
+	[PrimaryKey("Maloaisanpham", AutoIncrement=false)]
+
 
 	[ExplicitColumns]
 
@@ -159,6 +161,12 @@ namespace ShopOnlineConnection
 
 
 
+
+
+		[Column] public int? TinhTrang { get; set; }
+
+
+
 	}
 
     
@@ -166,6 +174,8 @@ namespace ShopOnlineConnection
 	[TableName("dbo.NhaSanXuat")]
 
 
+
+	[PrimaryKey("Manhasanxuat", AutoIncrement=false)]
 
 
 	[ExplicitColumns]

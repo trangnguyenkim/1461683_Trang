@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    table, td, th {
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th {
+        text-align: left;
+    }
+</style>
+<table>
+    <tr>
+        <th>Mã Sản Phẩm</th>
+        <th>Mã Nhà Sản Phẩm</th>
+        <th>Mã Loại Sản Phẩm</th>
+        <th>Tên Sản Phẩm</th>
+        <th>Cấu Hình</th>
+        <th>Hình Chính</th>
+        <th>Giá</th>
+        <th>Số Lượng</th>
+        <th>Ram</th>
+        <th>Cpu</th>
+        <th>Cmera</th>
+        <th>Lượt view</th>
+        <th>Tình Trạng</th>
+        <th>Thêm</th>
+        <th>Sữa</th>
+        <th>Khóa</th>
+        <th>Khôi Phục</th>
+        <th>Xóa</th>
+        
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Masanpham</td>
+            <td>@item.Manhasanxuat</td>
+            <td>@item.Maloaisanpham</td>
+            <td>@item.Tensanpham</td>
+            <td>@item.Cauhinh</td>
+            <td>@item.Hinhchinh</td>
+            <td>@item.Gia</td>
+            <td>@item.Soluongdaban</td>
+            <td>@item.Ram</td>
+            <td>@item.Cpu</td>
+            <td>@item.Camera</td>
+            <td>@item.Luotview</td>
+            <td>@item.Tinhtrang</td>
+            <td>
+                <a href="@Url.Action("Create","SanPhamAdmin")"><img src="~/Areas/asste/img/Add.png" /></a>
+            </td>
+            <td>
+                <a href="@Url.Action("Edit","SanPhamAdmin",new { id=@item.Maloaisanpham })"><img src="~/Areas/asste/img/edit.png" /></a>
+            </td>
+
+            <td>
+                <form method="post" action="@Url.Action("xoatam","SanPhamAdmin")">
+                    <input type="hidden" name="id" value="@item.Maloaisanpham" />
+                    <button type="submit"><img src="~/Areas/asste/img/khoa.png" /></button>
+                </form>
+            </td>
+
+            <td>
+                <form method="post" action="@Url.Action("KhoiPhucTinhTrang","SanPhamAdmin")">
+                    <input type="hidden" name="id" value="@item.Maloaisanpham" />
+                    <button type="submit"><img src="~/Areas/asste/img/khoiphuc.png" /></button>
+                </form>
+            </td>
+            <td>
+                <a href="#"><img src="~/Areas/asste/img/delete.png" /></a>
+            </td>
+        </tr>
+    }
+
+
+
+</table>
+
