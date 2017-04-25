@@ -208,6 +208,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MenuLoaiSanPhamController.cs" />
+    <Compile Include="Controllers\MuneSanPhamController.cs" />
     <Compile Include="Controllers\ShopOnlineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -413,6 +415,8 @@
     <Content Include="Views\ShopOnline\Index.cshtml" />
     <Content Include="Views\ShopOnline\Details.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\MuneSanPham\AllProducts.cshtml" />
+    <Content Include="Views\MenuLoaiSanPham\DanhSachLoai.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

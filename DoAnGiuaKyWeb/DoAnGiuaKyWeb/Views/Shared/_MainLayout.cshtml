@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using DoAnGiuaKyWeb.Models.Bus
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -90,8 +91,37 @@
                     <li class="dropdown">
                         <a href="@Url.Action("Index","ShopOnline")" class="dropdown-toggle" data-toggle="dropdown">Products</a>
                     </li>
-                  aaaaaaaa
                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nhà Sản Xuất</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    @foreach (var item in ShopOnlineBus.NhaSanXuat())
+                                    {
+                                        <li>
+                                            <a href="@Url.Action("AllProducts","MuneSanPham",new { id = @item.Manhasanxuat })">@item.Tennhasanxuat</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Loại Sản Phẩm </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    @foreach (var item in ShopOnlineBus.LoaiSanPham())
+                                    {
+                                        <li>
+                                            <a href="@Url.Action("DanhSachLoai","MenuLoaiSanPham",new { id = @item.Maloaisanpham })">@item.Tenloaisanpham</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    @*<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mobiles &amp; Tablet</a>
                         <div class="dropdown-menu" style="margin-left: -203.625px;">
                             <div class="dropdown-inner">
@@ -119,7 +149,7 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="category.html">Software</a></li>
+                    <li><a href="category.html">Software</a></li>*@
                 </ul>
             </div>
         </div>

@@ -1,25 +1,26 @@
-﻿@model PetaPoco.Page<ShopOnlineConnection.SanPham>
+﻿@model List<ShopOnlineConnection.SanPham>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "AllProducts";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+
 <div id="page-content" class="home-page">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="products">
-                    @foreach (var item in Model.Items)
+                    @foreach (var item in Model)
                     {
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="product">
-                                <div class="image"><a href="@Url.Action("Details", new { id = @item.Masanpham})"><img src=@item.Hinhchinh></a></div>
+                                <div class="image"><a href="@Url.Action("Details","ShopOnline", new { id = @item.Masanpham})"><img src=@item.Hinhchinh></a></div>
                                 <div class="buttons">
                                     <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                                     <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
                                     <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
                                 </div>
                                 <div class="caption">
-                                    <div class="name"><h3>@Html.ActionLink(item.Tensanpham, "Details", new { id = item.Masanpham })</h3></div>
+                                    <div class="name"><h3>@Html.ActionLink(item.Tensanpham, "Details", "ShopOnline", new { id = item.Masanpham })</h3></div>
                                     <div class="price">@string.Format("{0:#,0 Vnđ}", @item.Gia)</div>
                                     <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
                                 </div>
@@ -31,14 +32,4 @@
         </div>
     </div>
 </div>
-<div class="product-pagination text-center">
-    <nav>
-        <ul class="pagination">        
-            @for (int i = 1; i <= Model.TotalPages; i++)
-            {
-                <li>@Html.ActionLink(@i.ToString(), "Index", new { page = i })</li>
 
-            } 
-        </ul>
-    </nav>
-</div>

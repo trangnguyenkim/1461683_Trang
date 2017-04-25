@@ -185,6 +185,12 @@ namespace ShopOnlineConnection
 
 
 
+
+
+		[Column] public int? TinhTrang { get; set; }
+
+
+
 	}
 
     
